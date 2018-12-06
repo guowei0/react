@@ -10,10 +10,10 @@ export default class RouteMap extends React.Component{
                 {
                     routes.length && routes.map((ite,ind)=>{
                         return(
-                            <Route key={ind} path={ite.path} component={()=>{
+                            <Route key={ind} path={ite.path} component={(api)=>{
                                 const Component = ite.component;
                                 const Children = ite.children === undefined ? [] : ite.children;
-                                return <Component routes={Children}></Component>
+                                return <Component routes={Children} {...api}></Component>
                             }}></Route>
                         )
                     }).concat([defaultRoute])

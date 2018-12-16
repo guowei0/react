@@ -156,7 +156,8 @@ module.exports = {
       'view':resolveApp('src/containers'),
       'common':resolveApp('src/common'),
       'router':resolveApp('src/router'),
-      'utils':resolveApp('src/utils')
+      'utils':resolveApp('src/utils'),
+      'store':resolveApp('src/store')
     },
     plugins: [
       // Adds support for installing with Plug'n'Play, leading to faster installs and adding
